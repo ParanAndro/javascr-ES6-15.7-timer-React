@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+$fonts: Lato, sans-serif;
+body {
+font: 100% $fonts;
+margin: 0 auto;
+max-width: 500px;
+	.container {
+	text-align: center;
+	background-color: gray;
+	margin-top: 20%;
+	padding: 10%;
+		.controls {
+		display: flex;
+		justify-content: space-between;
+		padding-bottom: 10%;
+		 	.button {
+		 	text-decoration: none;
+		 	color: white;
+		 	font-weight: 700;
+		 	width: 100px;
+		 	padding: 5% 0;
+		 	border: 2px solid white;
+		 	border-radius: 5%;
+		 	}
+		 	a#start.button {
+		 		background-color: green;
+		 	}
+		 	a#stop.button {
+		 		background-color: red;
+		 	}
+		}
+		.stopwatch {
+			font-size: 30px;
+			border: 2px solid black;
+			border-radius: 10px;
+			width: 200px;
+			margin: 0 auto;
+			background-color: white;
+		}
+	}
+};
+
