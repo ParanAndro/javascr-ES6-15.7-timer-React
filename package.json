@@ -1,0 +1,28 @@
+{
+  "name": "javascr-es6-15.7-timer-react",
+  "version": "1.0.0",
+  "description": "Timer/React",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "babel script.js --watch --out-file script-compiled.js",
+    "server": "http-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ParanAndro/javascr-ES6-15.7-timer-React.git"
+  },
+  "author": "Radek",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ParanAndro/javascr-ES6-15.7-timer-React/issues"
+  },
+  "homepage": "https://github.com/ParanAndro/javascr-ES6-15.7-timer-React#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
+    "http-server": "^0.11.1"
+  }
+}
