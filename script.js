@@ -124,7 +124,7 @@ class Display extends React.Component {
 	}
 }
 
-var element = React.createElement(StopWatch);
+var element = React.createElement(Stopwatch);
 
 ReactDOM.render(element, document.getElementById('app'));
 
