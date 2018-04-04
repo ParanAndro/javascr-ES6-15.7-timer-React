@@ -40,7 +40,6 @@
     "url": "https://github.com/ParanAndro/javascr-ES6-15.7-timer-React/issues"
   },
   "homepage": "https://github.com/ParanAndro/javascr-ES6-15.7-timer-React#readme",
-   
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
