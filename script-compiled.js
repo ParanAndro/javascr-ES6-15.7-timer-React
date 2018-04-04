@@ -40,7 +40,6 @@ var StopWatch = function (_React$Component) {
 					miliseconds: 0
 				}
 			});
-			this.clear();
 		}
 	}, {
 		key: 'pad0',
@@ -126,12 +125,10 @@ var StopWatch = function (_React$Component) {
 	}, {
 		key: 'clear',
 		value: function clear() {
-			if (this.state.times.miliseconds > 0 || this.state.times.seconds > 0 || this.state.times.minutes > 0) {
-				this.setState({
-					results: [],
-					display: 'none'
-				});
-			}
+			this.setState({
+				results: [],
+				display: 'none'
+			});
 		}
 	}, {
 		key: 'render',
@@ -163,35 +160,39 @@ var StopWatch = function (_React$Component) {
 						{ href: '#', className: 'button', id: 'save', onClick: function onClick() {
 								return _this3.save();
 							} },
-						'SAVE RESULT'
+						'SAVE'
 					)
 				),
 				React.createElement(
 					'div',
-					{ className: 'display' },
-					this.format(this.state.times)
-				),
-				React.createElement(
-					'ul',
-					{ className: 'results' },
-					this.state.results.map(function (result) {
-						return React.createElement(
-							'li',
-							null,
-							result
-						);
-					})
-				),
-				React.createElement(
-					'div',
-					{ className: 'remove' },
+					{ className: 'operations' },
+					React.createElement(
+						'div',
+						{ className: 'display' },
+						this.format(this.state.times)
+					),
 					React.createElement(
 						'a',
 						{ href: '#', className: 'button', id: 'reset', onClick: function onClick() {
 								return _this3.reset();
 							} },
 						'RESET STOPWATCH'
-					),
+					)
+				),
+				React.createElement(
+					'ol',
+					{ className: 'results', reversed: true },
+					this.state.results.map(function (result) {
+						return React.createElement(
+							'li',
+							{ key: result },
+							result
+						);
+					})
+				),
+				React.createElement(
+					'div',
+					{ className: 'clearResults' },
 					React.createElement(
 						'a',
 						{ href: '#', className: 'button', id: 'clear', onClick: function onClick() {

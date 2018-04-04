@@ -20,7 +20,6 @@ class StopWatch extends React.Component {
 				miliseconds: 0
 			},
 		});
-		this.clear()
 	}
 
 	pad0 (value) {
@@ -94,12 +93,10 @@ class StopWatch extends React.Component {
 	}
 
 	clear() {
-		if(this.state.times.miliseconds > 0 || this.state.times.seconds > 0 || this.state.times.minutes > 0) {
 	        this.setState({
 	            results: [],
 	            display: 'none'
 	        })
-    	}
     }
 	
 	render () {
@@ -108,16 +105,17 @@ class StopWatch extends React.Component {
 						<nav className = {'controls'}>
 							<a href = {'#'} className = {'button'} id = {'start'} onClick = {() => this.start()}>START</a>
 							<a href = {'#'} className = {'button'} id = {'stop'} onClick = {() => this.stop()}>STOP</a>
-							<a href = {'#'} className = {'button'} id = {'save'} onClick = {() => this.save()}>SAVE RESULT</a>
+							<a href = {'#'} className = {'button'} id = {'save'} onClick = {() => this.save()}>SAVE</a>
 						</nav>
-						<div className = "display">{this.format(this.state.times)}</div>
-						<ul className = "results">
-						{this.state.results.map((result) => <li>{result}</li>)}
-						</ul>
-						<div className = {'remove'}>
-						<a href = {'#'} className = {'button'} id = {'reset'} onClick = {() => this.reset()}>RESET STOPWATCH</a>
+						<div className = {'operations'}>
+							<div className = "display">{this.format(this.state.times)}</div>
+							<a href = {'#'} className = {'button'} id = {'reset'} onClick = {() => this.reset()}>RESET STOPWATCH</a>
+						</div>
+						<ol className = "results" reversed>
+						{this.state.results.map((result) => <li key={result}>{result}</li>)}
+						</ol>
+						<div className = {'clearResults'}>
 						<a href = {'#'} className = {'button'} id = {'clear'} onClick = {() => this.clear()}>CLEAR RESULTS</a>
-						
 						</div>
 				</div>
 			);
@@ -127,4 +125,3 @@ class StopWatch extends React.Component {
 
 const element = React.createElement(StopWatch);
 ReactDOM.render(element, document.getElementById('app'));
-

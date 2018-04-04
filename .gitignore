@@ -1,6 +1,7 @@
 .node_modules
 .sass-cache
 .css
+script-compiled.js
 style.css.map
 style.css
 style.prefixed.css
